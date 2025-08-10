@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Enter the Marvel Universe - Explore your favorite superheroes and share why you love them">
+  <meta name="theme-color" content="#ff0000">
+  <title>Marvel Universe - Fan Portal</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/images/Avengers-Logo.png" as="image">
+  <link rel="preload" href="fonts/AVENGEANCE HEROIC AVENGER.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== NAVBAR START ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">
+      <img src="assets/images/marvel-logo.png" alt="Marvel Logo" width="40" height="40">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" aria-label="Go to home section">Home</a></li>
+      <li><a href="#characters" aria-label="Go to characters section">Characters</a></li>
+      <li><a href="#comics" aria-label="Go to comics section">Comics</a></li>
+      <li><a href="#movies" aria-label="Go to movies section">Movies</a></li>
+      <li><a href="#contact" aria-label="Go to contact section">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- ===== NAVBAR END ===== -->
+
+  <!-- ===== HERO SECTION ===== -->
+  <header class="hero-section" id="home" role="banner">
+    <img src="assets/images/Avengers-Logo.png" alt="Avengers Logo" class="marvel-logo" width="500" height="300">
+    <h1>Enter the Marvel Universe</h1>
+  </header>
+
+  <!-- ===== CHARACTER SECTIONS ===== -->
+  <main role="main">
+    <section class="character-section ironman-section bg-reveal" id="characters" aria-labelledby="ironman-title">
+      <div class="hero-card scroll-reveal" role="button" tabindex="0" aria-label="Click to share why you like Iron Man">
+        <img src="assets/images/IronMan.png" alt="Iron Man in his red and gold armor" width="350" height="400" loading="lazy">
+        <div class="hero-info">
+          <p class="hero-name" id="ironman-title">Iron Man</p>
+          <p class="hero-tagline">Genius. Billionaire. Philanthropist.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="character-section captainamerica-section bg-reveal" aria-labelledby="captain-title"> 
+      <div class="hero-card scroll-reveal" role="button" tabindex="0" aria-label="Click to share why you like Captain America">
+        <img src="assets/images/CaptainAmerica.png" alt="Captain America with his iconic shield" width="350" height="400" loading="lazy">
+        <div class="hero-info">
+          <p class="hero-name" id="captain-title">Captain America</p>
+          <p class="hero-tagline">The first Avenger. A symbol of hope.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="character-section hulk-section bg-reveal" aria-labelledby="hulk-title">
+      <div class="hero-card scroll-reveal" role="button" tabindex="0" aria-label="Click to share why you like Hulk">
+        <img src="assets/images/Hulk.png" alt="Hulk in his powerful green form" width="350" height="400" loading="lazy">
+        <div class="hero-info">
+          <p class="hero-name" id="hulk-title">Hulk</p>
+          <p class="hero-tagline">Big. Green. Angry. But with a heart.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="character-section thor-section bg-reveal" aria-labelledby="thor-title">
+      <div class="hero-card scroll-reveal" role="button" tabindex="0" aria-label="Click to share why you like Thor">
+        <img src="assets/images/Thor.png" alt="Thor with his mighty hammer Mjolnir" width="350" height="400" loading="lazy">
+        <div class="hero-info">
+          <p class="hero-name" id="thor-title">Thor</p>
+          <p class="hero-tagline">God of Thunder</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== MODALS ===== -->
+  <div class="modal" id="ironman-modal" role="dialog" aria-labelledby="ironman-modal-title" aria-hidden="true">
+    <div class="modal
