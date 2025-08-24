@@ -1,5 +1,6 @@
 🌌 # Marvel Fan Portal
 
+
 An interactive and eye-catching fan portal for Marvel enthusiasts.
 This project brings the Marvel Universe to life with smooth animations, hero sections, and engaging UI.
 
