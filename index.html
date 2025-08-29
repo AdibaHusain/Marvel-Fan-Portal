@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marvel Universe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== NAVBAR START ===== -->
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#characters">Characters</a></li>
+    <li><a href="#movies">Movies</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<!-- ===== NAVBAR END ===== -->
+
+  <header class="hero-section">
+    <img src="assets/images/Avengers-Logo.png" alt="Marvel Logo" class="marvel-logo">
+    <h1>Enter the Marvel Universe</h1>
+  </header>
+
+  <section class="character-section ironman-section  bg-reveal">
+    <div class="hero-card scroll-reveal">
+      <img src="assets/images/IronMan.png" alt="Iron Man">
+      <div class="hero-info">
+      <p class="hero-name">Iron Man</p>
+      <p class="hero-tagline">Genius. Billionaire. Philanthropist.</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="character-section captainamerica-section bg-reveal"> 
+  <div class="hero-card scroll-reveal">
+      <img src="assets/images/CaptainAmerica.png" alt="Captain America">
+      <div class="hero-info">
+      <p class="hero-name">Captain America</p>
+      <p class="hero-tagline">The first Avenger. A symbol of hope.</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="character-section hulk-section bg-reveal">
+    <div class="hero-card scroll-reveal">
+      <img src="assets/images/Hulk.png" alt="Hulk">
+      <div class="hero-info">
+    <p class="hero-name">Hulk</p>
+    <p class="hero-tagline">Big. Green. Angry. But with a heart.</p>
+  </div>
+    </div>
+  </section>
+  
+ <section class="character-section thor-section bg-reveal">
+    <div class="hero-card scroll-reveal">
+      <img src="assets/images/Thor.png" alt="Thor">
+      <div class="hero-info">
+      <p class="hero-name">Thor</p>
+      <p class="hero-tagline">God of Thunder</p>
+  </div>
+    </div>
+  </section>
+
+  <div class="modal" id="ironman-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Why do you like Iron Man?</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <textarea placeholder="Why do you like Iron Man?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="captainamerica-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Why do you like Captain America?</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <textarea placeholder="Why do you like Captain America" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="hulk-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Why do you like Hulk?</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <textarea placeholder="Why do you like Hulk?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="thor-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Why do you like Thor?</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <textarea placeholder="Why do you like Thor?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
