@@ -47,14 +47,48 @@ bgSections.forEach(section => {
   bgObserver.observe(section);
 });
 
-// NAVBAR SCROLL EFFECT
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
+// Smooth scroll and active link highlight
+const links = document.querySelectorAll('nav ul li a');
+const indicator = document.querySelector('.nav-indicator');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Smooth scroll for internal links
+        const href = this.getAttribute('href');
+
+        // Only for internal links that exist on this page
+        if(href.startsWith('#') && document.querySelector(href)) {
+            e.preventDefault();
+            const section = document.querySelector(href);
+            section.scrollIntoView({behavior: 'smooth'});
+
+            // Update URL without page jump
+            history.pushState(null, null, href);
+        }
+
+        // Active link update
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+
+        // Move indicator under active link
+        indicator.style.width = this.offsetWidth + 'px';
+        indicator.style.left = this.offsetLeft + 'px';
+    });
 });
+
+// Initialize indicator on page load
+window.addEventListener('load', () => {
+    const active = document.querySelector('nav ul li a.active');
+    indicator.style.width = active.offsetWidth + 'px';
+    indicator.style.left = active.offsetLeft + 'px';
+});
+
+// Update indicator on window resize
+window.addEventListener('resize', () => {
+    const active = document.querySelector('nav ul li a.active');
+    indicator.style.width = active.offsetWidth + 'px';
+    indicator.style.left = active.offsetLeft + 'px';
+});
+
 
 

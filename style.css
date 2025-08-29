@@ -91,10 +91,8 @@ body {
 
 body {
   margin: 0;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
   font-family: 'Bebas Neue', sans-serif;
+  scroll-behavior: smooth; 
 }
 
 .hero-card {
@@ -236,57 +234,68 @@ h1:hover{
   transform: translateY(-0.25em);
 }
 
-/* ===== NAVBAR STYLING ===== */
-.navbar {
+nav{
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: #111;
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 0;
   z-index: 1000;
   transition: background 0.3s ease;
 }
 
-.navbar.scrolled {
-  background: rgba(255,0,0,0.9);
-}
-
-.nav-logo img {
-  height: 40px;
-  width: 40px;
-}
-
-.nav-links {
-  list-style: none;
+nav ul{
   display: flex;
-  gap: 30px;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: red;
-  transition: width 0.3s ease;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
+#home { background: #1a1a1a; }
+#characters { background: #333; }
+
+nav ul li a:hover {
+    background: linear-gradient(90deg, #ff0000, #ff8c00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+nav ul li a.active {
+    border-bottom: 3px solid red;
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: red;
+    transition: all 0.3s ease;
+}
+
+
+
+
 
 html, body {
   margin: 0;
